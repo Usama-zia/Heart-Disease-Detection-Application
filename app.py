@@ -2,6 +2,8 @@
 from flask import Flask, request, render_template
 import os
 import pickle
+import webbrowser
+from threading import Timer
 
 print("Test")
 print("Test 2")
@@ -16,7 +18,9 @@ with open('Models/RF_model.pkl', 'rb') as f:
 
 with open('Models/svm_clf_model.pkl', 'rb') as f:
     svm_model = pickle.load(f)
-
+    
+def open_browser():
+    webbrowser.open_new('http://127.0.0.1:2000/')
 
 def get_predictions(age, sex, chest_pain_type, resting_blood_pressure,cholestoral,fasting_blood_sugar,resting_electrocardiographic_results, maximum_heart_rate,
                                 exercise_induced_angina, ST_depression, exercise_ST_segment, vessels_colored, thal, req_model):
@@ -80,4 +84,6 @@ def my_form_post():
         return render_template('home.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    #app.run(host="127.0.0.1", port=5000, debug=False)
+    Timer(1, open_browser).start();
+    app.run(port=2000)
