@@ -8,4 +8,5 @@ conda activate heart
 git clone --recursive https://github.com/Usama-zia/Heart-Disease-Detection-Application.git 
 cd Heart-Disease-Detection-Application
 pip install -r requirements.txt
+python app.py
 ```
