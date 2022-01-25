@@ -71,11 +71,11 @@ def my_form_post():
                                  maximum_heart_rate,exercise_induced_angina, ST_depression, exercise_ST_segment, vessels_colored, thal, req_model)
 
         if target==1:
-            sale_making = 'patient has a diease'
+            patient_result = 'patient has a diease'
         else:
-            sale_making = 'patient does not have a diease'
+            patient_result = 'patient does not have a diease'
 
-        return render_template('home.html', target = target, sale_making = sale_making)
+        return render_template('home.html', target = target, result = patient_result)
     else:
         return render_template('home.html')
 
