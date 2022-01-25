@@ -10,3 +10,4 @@ cd Heart-Disease-Detection-Application
 pip install -r requirements.txt
 python app.py
 ```
+App will open in brower, fill the form and see the result.
