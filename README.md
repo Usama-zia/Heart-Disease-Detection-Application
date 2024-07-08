@@ -2,6 +2,7 @@
 # Heart Disease Detection Application
 
 Welcome to the Heart Disease Detection Application repository! This project is designed to predict the likelihood of heart disease in patients using machine learning algorithms.
+(Work is ongoing on this project to introduce better performing ML models and include deep learning models.)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
